@@ -1,7 +1,7 @@
 const { Client, LocalAuth, Buttons, List } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 const AutoReply = require("./models/AutoReplyModel");
-const { findMention } = require("./helpers/mentions");
+const { hasMention } = require("./helpers/mentions");
 
 function newClient(PHONE_NUMBER) {
   const client = new Client({
@@ -36,8 +36,8 @@ function newClient(PHONE_NUMBER) {
       const response = await AutoReply.find({ message: msg.body });
       if (response.length) {
         let reply = response[0].reply;
-        const haveMention = await findMention(reply);
-        if (haveMention)
+        const msgHasMention = await hasMention(reply);
+        if (msgHasMention)
           chat.sendMessage(reply.replace("@{mention}", `@${contact.id.user}`), {
             mentions: [contact],
           });

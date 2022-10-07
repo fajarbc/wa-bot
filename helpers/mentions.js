@@ -1,6 +1,6 @@
 const { findPattern } = require("anagram-palindrome")
 module.exports = {
-    findMention: async (text) => {
+    hasMention: async (text) => {
     const result = findPattern("@{mention}", text, {
       caseSensitive: true,
       space: true,
