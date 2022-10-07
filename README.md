@@ -4,15 +4,35 @@ WhatsApp bot using [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web
 
 Using MongoDB and mongoose to store list message and reply
 
-# Install
-```
-npm install
-```
+# Setup
+1. Install Dependecies
+    ```
+    npm install
+    ```
+2. Database seeds. Example of `autoreplies` collection to mention the message sender. Here `@{mention}` will be replaced by `@{contact.user.id}`
+    ```json
+    {
+    message: "!hi",
+    reply: "hello @{mention}",
+    created_at: {
+        $date: {
+        $numberLong: "1665014400000",
+        },
+    },
+    updated_at: {
+        $date: {
+        $numberLong: "1665070380000",
+        },
+    },
+    }
+    ```
 
 # Running
-```
-npm start
-```
+1. Run the app
+    ```
+    npm start
+    ```
+2. Scan QR Code shown in terminal
 
 # Testing
 ```
