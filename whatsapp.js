@@ -6,6 +6,7 @@ const { findMention } = require("./helpers/mentions");
 function newClient(PHONE_NUMBER) {
   const client = new Client({
     authStrategy: new LocalAuth({ clientId: PHONE_NUMBER }),
+    puppeteer: { headless: true, args: ['--no-sandbox'] },
   });
 
   client.on("qr", (qr) => {
