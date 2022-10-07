@@ -12,16 +12,16 @@ Using MongoDB and mongoose to store list message and reply
 2. Database seeds. Example of `autoreplies` collection to mention the message sender. Here `@{mention}` will be replaced by `@{contact.user.id}`
     ```json
     {
-    message: "!hi",
-    reply: "hello @{mention}",
-    created_at: {
-        $date: {
-        $numberLong: "1665014400000",
+    "message": "!hi",
+    "reply": "hello @{mention}",
+    "created_at": {
+        "$date": {
+        "$numberLong": "1665014400000",
         },
     },
-    updated_at: {
-        $date: {
-        $numberLong: "1665070380000",
+    "updated_at": {
+        "$date": {
+        "$numberLong": "1665070380000",
         },
     },
     }
