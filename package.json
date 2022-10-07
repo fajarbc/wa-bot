@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/fajarbc/wa-bot#readme",
   "dependencies": {
-    "anagram-palindrome": "^0.2.3",
-    "esm": "^3.2.25",
+    "anagram-palindrome": "^0.3.1",
     "mongoose": "^6.6.5",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.17.1"
