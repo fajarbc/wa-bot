@@ -38,3 +38,8 @@ Using MongoDB and mongoose to store list message and reply
 ```
 npm test
 ```
+
+# Run docker compose
+```
+docker-compose up
+```
