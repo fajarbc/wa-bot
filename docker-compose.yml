@@ -1,13 +1,13 @@
-version: '3'
+version: '3.7'
 
 services:
   mongo:
-    image: 'mongo'
-    container_name: 'mongodb_container'
+    image: mongo
+    container_name: mongodb_container
     volumes:
       - ./data:/data/db
     ports:
-      - '27017:27017'
+      - 27017:27017
     environment:
       - MONGO_INITDB_ROOT_USERNAME=issue#1
       - MONGO_INITDB_ROOT_PASSWORD=secretPassword
