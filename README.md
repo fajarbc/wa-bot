@@ -38,3 +38,17 @@ Using MongoDB and mongoose to store list message and reply
 ```
 npm test
 ```
+
+# Run docker compose in detached mode
+```
+docker-compose up -d
+```
+# Manage database
+where mongodb_container is the container name
+```
+sudo docker exec -it mongodb_container bash
+```
+Enter this to switch to your database
+```
+use datbaseName
+```
